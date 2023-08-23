@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --theme-color: rgb(25, 25, 25);
+    --text-color: #ffffffe2;
+    --bg-color: rgb(51, 51, 51);
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(25, 25, 25, 0.876);
+}
+
+.form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--theme-color);
+    /* width: fit-content; */
+    width: 400px;
+    padding: 34px;
+    border-radius: 4px;
+    height: 450px;
+}
+
+.c-1 {
+    background-color: rgba(41, 112, 41, 0.869) !important;
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+ul li,
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    list-style-type: none;
+}
+
+.tab {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tab-item {
+    padding: 8px 16px;
+}
+
+
+
+/* CONTENT */
+
+h1 {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.tab-content {
+    margin-top: 18px;
+    color: var(--text-color);
+}
+
+.name-con {
+    /* margin: 18px 0; */
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-con input,
+.email input,
+.pass input {
+    width: 48%;
+    margin: 10px 0;
+    height: 32px;
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 17px;
+    padding: 18px;
+    border-radius: 18px;
+    background-color: var(--bg-color);
+}
+
+.name-con input::placeholder {
+    color: rgba(255, 255, 255, 0.429);
+}
+
+.c-2 {
+    width: 100% !important;
+}
+
+
+/* checkbox */
+.checkBox {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+
+}
+
+
+.btn{
+    text-align: center;
+    background: none;
+    margin: 18px 0;
+
+}
+
+.btn button{
+    background: none;
+    border: none;
+    color: var(--text-color);
+    padding: 8px 16px;
+    font: 21px;
+    cursor: pointer;
+}
+
+
+input::placeholder{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15.4px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    body {
+        background-color: var(--bg-color);
+    }
+
+    .form {
+        width: 80%;
+        padding: 20px;
+        height: fit-content;
+        top: 10px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: none;
+        margin: 55px auto;
+        border-radius: 18px;
+    }
+
+    .name-con input,
+    .email input,
+    .pass input {
+        width: 100%;
+    }
+
+    .tab {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .tab-item {
+        padding: 8px 10px;
+    }
+
+    .name-con,
+    .email,
+    .pass {
+        margin: 10px 0;
+    }
+
+    .name-con{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .checkBox {
+        margin: 20px 0;
+    }
+
+    .btn {
+        margin-top: 30px;
+    }
+}
